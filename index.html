@@ -9,80 +9,62 @@
 <body>
 
 <!-- TITELBANNER -->
-<section class="banner">
-  <img src="https://i.postimg.cc/pX3qfXm5/android.png" alt="Banner Hintergrund" class="banner-img">
-
-  <div class="overlay-top"></div>
-  <div class="overlay-bottom"></div>
-
-  <!-- Symbole -->
-  <div class="symbol-layer">
-    <span class="floating-symbol" style="top: 12%; left: 25%;">0</span>
-    <span class="floating-symbol" style="top: 45%; left: 65%;">1</span>
-    <span class="floating-symbol" style="top: 28%; left: 35%;">{}</span>
-    <span class="floating-symbol" style="top: 58%; left: 18%;">&lt;&gt;</span>
-    <span class="floating-symbol" style="top: 22%; left: 75%;">()</span>
-    <span class="floating-symbol" style="top: 70%; left: 40%;">[]</span>
-    <span class="floating-symbol" style="top: 38%; left: 15%;">$</span>
-    <span class="floating-symbol" style="top: 75%; left: 78%;">&amp;</span>
-    <span class="floating-symbol" style="top: 26%; left: 58%;">%</span>
-  </div>
-
-  <h1 class="fade-in">Think smart.</h1>
-  <div class="text-block fade-in">
+<section class="hero">
+  <img src="https://i.postimg.cc/pX3qfXm5/android.png" class="hero-bg" alt="Banner Hintergrund" />
+  <div class="overlay top"></div>
+  <div class="overlay bottom"></div>
+  <div class="hero-content fade-in">
+    <h1>Think smart.</h1>
     <p>Intelligente Software für Private,<br>Unternehmen und Freelancer.</p>
-    <p>Schnell und einfach – powered by AI.</p>
-  </div>
-  <div class="button fade-in">
-    <a href="#roadmap">Erfahre mehr.</a>
+    <p class="sub">Schnell und einfach – powered by AI.</p>
+    <a href="#" class="cta-button">Erfahre mehr.</a>
   </div>
 </section>
 
-<!-- ROADMAP SECTION -->
-<section id="roadmap" class="parallax fade-in">
-  <div class="overlay-top"></div>
-  <div class="overlay-bottom"></div>
-  <div class="content">
-    <h2><a href="https://www.obl-xsmartsolutions.de/roadmap">Roadmap.</a></h2>
+<!-- SLIDER -->
+<section class="slider">
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <div class="elfsight-app-c27fb32a-bd26-4d2a-aa36-fba4d5aebba8" data-elfsight-app-lazy></div>
+</section>
+
+<!-- ROADMAP -->
+<section class="parallax-section fade-in">
+  <div class="parallax-bg"></div>
+  <div class="roadmap-inner">
+    <h2><a href="#">Roadmap.</a></h2>
   </div>
 </section>
 
-<!-- TEAM & KONTAKT -->
-<section class="section-container fade-in">
-  <a href="https://www.obl-xsmartsolutions.de/team" class="banner-box">
-    <div class="background" style="background-image: url('https://i.postimg.cc/zBVgXzv7/team.png');"></div>
-    <div class="overlay"><h2>Team.</h2></div>
+<!-- BANNER SECTION -->
+<section class="banner-section">
+  <a href="LINK_ZU_TEAM" class="banner fade-in" style="background-image: url('https://i.postimg.cc/zBVgXzv7/team.png');">
+    <h2>Team.</h2>
   </a>
-
-  <a href="https://www.obl-xsmartsolutions.de/kontakt" class="banner-box">
-    <div class="background" style="background-image: url('https://i.postimg.cc/8z7QHx73/Kontakt.png');"></div>
-    <div class="overlay"><h2>Kontakt.</h2></div>
+  <a href="LINK_ZU_KONTAKT" class="banner fade-in" style="background-image: url('https://i.postimg.cc/Qth2XdQX/wordartist-91-futuristic-website-banner-with-weichzeichner-effe-574fce0e-3dc3-4ba8-8176-50bafcdafa6a.png');">
+    <h2>Kontakt.</h2>
   </a>
-</section>
-
-<!-- BLOG -->
-<section class="fade-in">
-  <a href="https://www.obl-xsmartsolutions.de/blog" class="blog-banner">
-    <div class="background" style="background-image: url('https://i.postimg.cc/431K1K7B/wordartist-91-a-picture-of-android-reading-a-newspaper-in-a-fut-123fab6d-9e0d-4c95-b97b-cdcdec124e75.png');"></div>
-    <div class="overlay"><h2>Blog.</h2></div>
+  <a href="LINK_ZU_BLOG" class="banner fade-in" style="background-image: url('https://i.postimg.cc/431K1K7B/wordartist-91-a-picture-of-android-reading-a-newspaper-in-a-fut-123fab6d-9e0d-4c95-b97b-cdcdec124e75.png');">
+    <h2>Blog.</h2>
   </a>
 </section>
 
-<!-- FADE-IN SCRIPT -->
 <script>
-window.addEventListener('scroll', function() {
-  document.querySelectorAll('.fade-in').forEach(el => {
-    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-      el.classList.add('visible');
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('.fade-in').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add('visible');
+      }
+    });
+  });
+
+  window.addEventListener('scroll', () => {
+    const bg = document.querySelector('.parallax-bg');
+    if (bg) {
+      const offset = window.pageYOffset;
+      bg.style.transform = `translateY(${offset * 0.4}px)`;
     }
   });
-
-  document.querySelectorAll('.parallax').forEach(el => {
-    let offset = window.scrollY;
-    el.style.backgroundPositionY = (offset * 0.5) + 'px';
-  });
-});
 </script>
-
 </body>
 </html>
