@@ -1,211 +1,73 @@
-/* GLOBAL */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background: #000;
-  color: white;
-  font-family: 'Segoe UI', sans-serif;
-  overflow-x: hidden;
-}
-html {
-  scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OBL X Smart Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-/* FADE-IN */
-.fade-in {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+<!-- TITELBANNER -->
+<section class="banner">
+  <img src="https://i.postimg.cc/pX3qfXm5/android.png" alt="Banner Hintergrund" class="banner-bg">
+  
+  <div class="banner-overlay-top"></div>
+  <div class="banner-overlay-bottom"></div>
 
-/* TITELBANNER */
-.banner {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 10%;
-}
-.banner-bg {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-.banner-overlay-top,
-.banner-overlay-bottom {
-  position: absolute;
-  height: 150px;
-  width: 100%;
-  z-index: 2;
-}
-.banner-overlay-top {
-  top: 0;
-  background: linear-gradient(to bottom, #000, transparent);
-}
-.banner-overlay-bottom {
-  bottom: 0;
-  background: linear-gradient(to top, #000, transparent);
-}
-.banner-title {
-  font-size: 70px;
-  font-weight: 800;
-  z-index: 3;
-  position: relative;
-  margin-bottom: 40px;
-}
-.banner-text {
-  z-index: 3;
-  position: relative;
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 40px;
-}
-.banner-button-wrap {
-  position: relative;
-  z-index: 3;
-}
-.banner-button {
-  display: inline-block;
-  padding: 16px 32px;
-  border: 2px solid white;
-  border-radius: 30px;
-  background: transparent;
-  color: white;
-  font-size: 20px;
-  text-decoration: none;
-  transition: all 0.4s ease;
-}
-.banner-button:hover {
-  background: white;
-  color: black;
-  box-shadow: 0 0 20px white;
-  transform: scale(1.05);
-}
+  <h1 class="banner-title fade-in">Think smart.</h1>
 
-/* SLIDER */
-.slider {
-  background: #000;
-  padding: 60px 20px;
-  max-width: 1400px;
-  margin: 0 auto 150px auto;
-}
+  <div class="banner-text fade-in">
+    <p>Intelligente Software für Private,<br>Unternehmen und Freelancer.</p>
+    <p>Schnell und einfach – powered by AI.</p>
+  </div>
 
-/* ROADMAP PARALLAX */
-.roadmap {
-  position: relative;
-  height: 600px;
-  background-image: url('https://i.postimg.cc/L8BG4Rgr/forest.png');
-  background-attachment: scroll;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.roadmap::before,
-.roadmap::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 150px;
-  z-index: 1;
-}
-.roadmap::before {
-  top: 0;
-  background: linear-gradient(to bottom, #000, transparent);
-}
-.roadmap::after {
-  bottom: 0;
-  background: linear-gradient(to top, #000, transparent);
-}
-.roadmap-inner {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.roadmap-inner h2 a {
-  font-size: 48px;
-  font-weight: 700;
-  color: white;
-  text-decoration: none;
-  transition: all 0.4s ease;
-}
-.roadmap-inner h2 a:hover {
-  text-shadow: 0 0 20px white;
-  transform: scale(1.05);
-}
+  <div class="banner-button-wrap fade-in">
+    <a href="#" class="banner-button">Erfahre mehr.</a>
+  </div>
+</section>
 
-/* BANNERBEREICH */
-.banner-section {
-  background: #000;
-  padding: 100px 20px;
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-}
-.banner-card {
-  display: block;
-  height: 400px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: all 0.4s ease;
-}
-.banner-card:hover {
-  box-shadow: 0 0 30px white;
-  transform: scale(1.03);
-}
-.banner-card h2 {
-  position: relative;
-  z-index: 2;
-  font-size: 30px;
-  font-weight: 700;
-  color: white;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.banner-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.3);
-  z-index: 1;
-  border-radius: 30px;
-}
+<!-- SLIDER -->
+<section class="slider">
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <div class="elfsight-app-c27fb32a-bd26-4d2a-aa36-fba4d5aebba8" data-elfsight-app-lazy></div>
+</section>
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .banner-title {
-    font-size: 48px;
+<!-- ROADMAP MIT PARALLAX -->
+<section class="roadmap parallax">
+  <div class="overlay"></div>
+  <div class="roadmap-inner fade-in">
+    <h2><a href="#">Roadmap.</a></h2>
+  </div>
+</section>
+
+<!-- BANNERBEREICH -->
+<section class="banner-section">
+  <a href="LINK_ZU_TEAM" class="banner-card fade-in" style="background-image: url('https://i.postimg.cc/zBVgXzv7/team.png')">
+    <h2>Team.</h2>
+  </a>
+  <a href="LINK_ZU_KONTAKT" class="banner-card fade-in" style="background-image: url('https://i.postimg.cc/Qth2XdQX/wordartist-91-futuristic-website-banner-with-weichzeichner-effe-574fce0e-3dc3-4ba8-8176-50bafcdafa6a.png')">
+    <h2>Kontakt.</h2>
+  </a>
+  <a href="LINK_ZU_BLOG" class="banner-card fade-in" style="background-image: url('https://i.postimg.cc/431K1K7B/wordartist-91-a-picture-of-android-reading-a-newspaper-in-a-fut-123fab6d-9e0d-4c95-b97b-cdcdec124e75.png')">
+    <h2>Blog.</h2>
+  </a>
+</section>
+
+<script>
+window.addEventListener('scroll', function () {
+  document.querySelectorAll('.fade-in').forEach(function (el) {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) el.classList.add('visible');
+  });
+
+  const roadmap = document.querySelector('.parallax');
+  if (roadmap) {
+    let scrollY = window.scrollY;
+    roadmap.style.backgroundPositionY = -(scrollY * 0.3) + 'px';
   }
-  .banner-text {
-    font-size: 16px;
-  }
-  .banner-button {
-    font-size: 16px;
-    padding: 12px 24px;
-  }
-  .roadmap-inner h2 a {
-    font-size: 32px;
-  }
-}
+});
+</script>
+
+</body>
+</html>
