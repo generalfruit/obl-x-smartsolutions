@@ -4,75 +4,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OBL X Smart Solutions</title>
-  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- TITELBANNER -->
-<section class="banner">
-  <img src="https://i.postimg.cc/pX3qfXm5/android.png" alt="Banner Hintergrund" class="banner-background">
+  <!-- TITELBANNER -->
+  <section class="hero">
+    <img src="https://i.postimg.cc/pX3qfXm5/android.png" alt="Hintergrund" class="hero-bg" />
 
-  <!-- Schwebende Symbole -->
-  <div class="floating-wrapper">
-    <span class="floating-symbol" style="top:12%;left:25%;">0</span>
-    <span class="floating-symbol" style="top:45%;left:65%;">1</span>
-    <span class="floating-symbol" style="top:28%;left:35%;">{}</span>
-    <span class="floating-symbol" style="top:58%;left:18%;">&lt;&gt;</span>
-    <span class="floating-symbol" style="top:22%;left:75%;">()</span>
-    <span class="floating-symbol" style="top:70%;left:40%;">[]</span>
-    <span class="floating-symbol" style="top:38%;left:15%;">$</span>
-    <span class="floating-symbol" style="top:75%;left:78%;">&amp;</span>
-    <span class="floating-symbol" style="top:26%;left:58%;">%</span>
-  </div>
+    <!-- Schwebende Symbole -->
+    <div class="symbols">
+      <span>0</span><span>1</span><span>{}</span><span>&lt;&gt;</span><span>()</span><span>[]</span><span>$</span><span>&amp;</span><span>%</span>
+    </div>
 
-  <!-- Inhalt -->
-  <div class="banner-content">
-    <h1>Think smart.</h1>
-    <p>Intelligente Software für Private,<br>Unternehmen und Freelancer.</p>
-    <p class="subline">Schnell und einfach – powered by AI.</p>
-    <a href="#" class="banner-button">Erfahre mehr.</a>
-  </div>
-</section>
+    <div class="hero-text">
+      <h1>Think smart.</h1>
+      <p>Intelligente Software für Private, Unternehmen und Freelancer.<br />
+         Schnell und einfach – powered by AI.</p>
+      <a href="#roadmap" class="btn">Erfahre mehr</a>
+    </div>
+  </section>
 
-<!-- SLIDER -->
-<section class="slider">
-  <div class="slider-inner">
-    <p style="text-align: center; font-size: 24px;">[Hier kann dein Slider eingebunden werden]</p>
-  </div>
-</section>
+  <!-- SLIDER PLATZHALTER -->
+  <section class="slider">
+    <div class="slider-inner">
+      <!-- Hier kann der Elfsight-Embed oder ein anderer Slider eingefügt werden -->
+      <p>Slider-Bereich</p>
+    </div>
+  </section>
 
-<!-- ROADMAP -->
-<section class="parallax roadmap" style="background-image: url('https://i.postimg.cc/L8BG4Rgr/forest.png');">
-  <div class="roadmap-content">
-    <h2><a href="#">Roadmap.</a></h2>
-  </div>
-</section>
+  <!-- ROADMAP -->
+  <section id="roadmap" class="parallax">
+    <div class="roadmap-overlay">
+      <h2><a href="#">Roadmap.</a></h2>
+    </div>
+  </section>
 
-<!-- TEAM UND KONTAKT -->
-<section class="content">
-  <div class="grid">
-    <a href="team.html" class="grid-item" style="background-image: url('https://i.postimg.cc/zBVgXzv7/team.png');"><h2>Team.</h2></a>
-    <a href="kontakt.html" class="grid-item" style="background-image: url('https://i.postimg.cc/8z7QHx73/Kontakt.png');"><h2>Kontakt.</h2></a>
-  </div>
-  <div class="single-banner">
-    <a href="blog.html" class="grid-item" style="background-image: url('https://i.postimg.cc/431K1K7B/wordartist-91-a-picture-of-android-reading-a-newspaper-in-a-fut-123fab6d-9e0d-4c95-b97b-cdcdec124e75.png');"><h2>Blog.</h2></a>
-  </div>
-</section>
+  <!-- TEAM, KONTAKT, BLOG -->
+  <section class="content">
+    <div class="card-row">
+      <a href="#team" class="card" style="background-image: url('https://i.postimg.cc/zBVgXzv7/team.png')">
+        <h3>Team.</h3>
+      </a>
+      <a href="#kontakt" class="card" style="background-image: url('https://i.postimg.cc/8z7QHx73/Kontakt.png')">
+        <h3>Kontakt.</h3>
+      </a>
+    </div>
+    <a href="#blog" class="card full" style="background-image: url('https://i.postimg.cc/431K1K7B/wordartist-91-a-picture-of-android-reading-a-newspaper-in-a-fut-123fab6d-9e0d-4c95-b97b-cdcdec124e75.png')">
+      <h3>Blog.</h3>
+    </a>
+  </section>
 
-<script>
-window.addEventListener('scroll', function() {
-  document.querySelectorAll('.fade-in').forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      el.classList.add('visible');
-    }
-  });
+  <!-- SCRIPTS -->
+  <script>
+    window.addEventListener('scroll', function () {
+      document.querySelectorAll('.fade-in').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('visible');
+        }
+      });
 
-  document.querySelectorAll('.parallax').forEach(el => {
-    let offset = window.pageYOffset;
-    el.style.backgroundPositionY = (offset * 0.4) + "px";
-  });
-});
-</script>
+      document.querySelectorAll('.parallax').forEach(el => {
+        let offset = window.pageYOffset;
+        el.style.backgroundPositionY = (offset * 0.4) + "px";
+      });
+    });
+  </script>
 </body>
 </html>
