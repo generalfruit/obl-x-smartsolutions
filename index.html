@@ -8,66 +8,77 @@
 </head>
 <body>
 
-<!-- TITELBANNER -->
-<section class="banner">
-  <img src="https://i.postimg.cc/pX3qfXm5/android.png" alt="Banner Hintergrund" class="banner-bg">
-  
-  <div class="banner-overlay-top"></div>
-  <div class="banner-overlay-bottom"></div>
+  <!-- TITELBANNER -->
+  <section class="hero">
+    <img src="https://i.postimg.cc/pX3qfXm5/android.png" alt="Banner Hintergrund" class="hero-bg" />
+    <div class="overlay top"></div>
+    <div class="overlay bottom"></div>
+    <div class="hero-content fade-in">
+      <h1>Think smart.</h1>
+      <p class="main-text">Intelligente Software für Private,<br>Unternehmen und Freelancer.</p>
+      <p class="sub-text">Schnell und einfach – powered by AI.</p>
+      <a href="#" class="cta-button">Erfahre mehr.</a>
+    </div>
+  </section>
 
-  <h1 class="banner-title fade-in">Think smart.</h1>
+  <!-- SLIDER -->
+  <section class="slider">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 60px 20px;">
+      <script src="https://static.elfsight.com/platform/platform.js" async></script>
+      <div class="elfsight-app-c27fb32a-bd26-4d2a-aa36-fba4d5aebba8" data-elfsight-app-lazy></div>
+    </div>
+  </section>
 
-  <div class="banner-text fade-in">
-    <p>Intelligente Software für Private,<br>Unternehmen und Freelancer.</p>
-    <p>Schnell und einfach – powered by AI.</p>
-  </div>
+  <!-- ROADMAP -->
+  <section class="roadmap">
+    <div class="roadmap-bg" id="parallax-bg"></div>
+    <div class="overlay top"></div>
+    <div class="overlay bottom"></div>
+    <div class="roadmap-inner fade-in">
+      <h2><a href="#">Roadmap.</a></h2>
+    </div>
+  </section>
 
-  <div class="banner-button-wrap fade-in">
-    <a href="#" class="banner-button">Erfahre mehr.</a>
-  </div>
-</section>
+  <!-- BANNER-BEREICH -->
+  <section class="banner-section">
 
-<!-- SLIDER -->
-<section class="slider">
-  <script src="https://static.elfsight.com/platform/platform.js" async></script>
-  <div class="elfsight-app-c27fb32a-bd26-4d2a-aa36-fba4d5aebba8" data-elfsight-app-lazy></div>
-</section>
+    <!-- TEAM -->
+    <a href="LINK_ZU_TEAM" class="banner fade-in" style="background-image: url('https://i.postimg.cc/zBVgXzv7/team.png');">
+      <h2>Team.</h2>
+    </a>
 
-<!-- ROADMAP MIT PARALLAX -->
-<section class="roadmap parallax">
-  <div class="overlay"></div>
-  <div class="roadmap-inner fade-in">
-    <h2><a href="#">Roadmap.</a></h2>
-  </div>
-</section>
+    <!-- KONTAKT -->
+    <a href="LINK_ZU_KONTAKT" class="banner fade-in" style="background-image: url('https://i.postimg.cc/Qth2XdQX/wordartist-91-futuristic-website-banner-with-weichzeichner-effe-574fce0e-3dc3-4ba8-8176-50bafcdafa6a.png');">
+      <h2>Kontakt.</h2>
+    </a>
 
-<!-- BANNERBEREICH -->
-<section class="banner-section">
-  <a href="LINK_ZU_TEAM" class="banner-card fade-in" style="background-image: url('https://i.postimg.cc/zBVgXzv7/team.png')">
-    <h2>Team.</h2>
-  </a>
-  <a href="LINK_ZU_KONTAKT" class="banner-card fade-in" style="background-image: url('https://i.postimg.cc/Qth2XdQX/wordartist-91-futuristic-website-banner-with-weichzeichner-effe-574fce0e-3dc3-4ba8-8176-50bafcdafa6a.png')">
-    <h2>Kontakt.</h2>
-  </a>
-  <a href="LINK_ZU_BLOG" class="banner-card fade-in" style="background-image: url('https://i.postimg.cc/431K1K7B/wordartist-91-a-picture-of-android-reading-a-newspaper-in-a-fut-123fab6d-9e0d-4c95-b97b-cdcdec124e75.png')">
-    <h2>Blog.</h2>
-  </a>
-</section>
+    <!-- BLOG -->
+    <a href="LINK_ZU_BLOG" class="banner fade-in" style="background-image: url('https://i.postimg.cc/431K1K7B/wordartist-91-a-picture-of-android-reading-a-newspaper-in-a-fut-123fab6d-9e0d-4c95-b97b-cdcdec124e75.png');">
+      <h2>Blog.</h2>
+    </a>
 
-<script>
-window.addEventListener('scroll', function () {
-  document.querySelectorAll('.fade-in').forEach(function (el) {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) el.classList.add('visible');
-  });
+  </section>
 
-  const roadmap = document.querySelector('.parallax');
-  if (roadmap) {
-    let scrollY = window.scrollY;
-    roadmap.style.backgroundPositionY = -(scrollY * 0.3) + 'px';
-  }
-});
-</script>
+  <!-- SCRIPT: Fade-In & Parallax -->
+  <script>
+    // FADE-IN
+    window.addEventListener('scroll', function () {
+      const elements = document.querySelectorAll('.fade-in');
+      elements.forEach(function (el) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('visible');
+        }
+      });
+    });
+
+    // PARALLAX für Roadmap
+    window.addEventListener('scroll', function () {
+      const parallax = document.getElementById('parallax-bg');
+      const offset = window.scrollY;
+      parallax.style.transform = 'translateY(' + offset * 0.3 + 'px)';
+    });
+  </script>
 
 </body>
 </html>
