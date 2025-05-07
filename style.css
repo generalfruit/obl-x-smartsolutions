@@ -1,9 +1,178 @@
-body {
-  font-family: sans-serif;
-  background-color: #f0f0f0;
-  padding: 30px;
-  color: #333;
+html {
+  scroll-behavior: smooth;
 }
-h1 {
-  color: #007acc;
+body {
+  margin: 0;
+  background: #000;
+  color: white;
+  font-family: sans-serif;
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 150px;
+}
+.banner-background {
+  width: 100%;
+  display: block;
+}
+.banner-content {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  z-index: 3;
+}
+.banner-content h1 {
+  font-size: 70px;
+  margin: 0 0 20px;
+}
+.banner-content p {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+.banner-content .subline {
+  font-size: 18px;
+}
+.banner-button {
+  display: inline-block;
+  padding: 16px 32px;
+  border: 2px solid white;
+  border-radius: 30px;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.4s ease, transform 0.4s ease;
+}
+.banner-button:hover {
+  background: white;
+  color: black;
+  box-shadow: 0 0 20px white;
+  transform: scale(1.05);
+}
+
+/* Floating Symbole */
+.floating-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+.floating-symbol {
+  position: absolute;
+  font-size: 30px;
+  color: white;
+  opacity: 0.08;
+  animation: floatRotate 20s ease-in-out infinite alternate, fadeInOut 12s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+@keyframes floatRotate {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(10deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  50% { opacity: 0.08; }
+  100% { opacity: 0; }
+}
+
+/* Slider */
+.slider-inner {
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Roadmap */
+.parallax {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+.roadmap-content h2 a {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.roadmap-content h2 a:hover {
+  text-shadow: 0 0 20px white;
+  transform: scale(1.05);
+}
+
+/* Banner Grid */
+.content {
+  padding: 100px 20px;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.single-banner {
+  max-width: 1400px;
+  margin: 60px auto 0 auto;
+}
+.grid-item {
+  flex: 1 1 48%;
+  min-width: 300px;
+  height: 400px;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.4s ease;
+}
+.grid-item h2 {
+  font-size: 30px;
+  color: white;
+  font-weight: 700;
+  z-index: 2;
+}
+.grid-item:hover {
+  box-shadow: 0 0 30px white;
+  transform: scale(1.03);
+}
+
+/* Fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Vibration bei Hover */
+h2:hover {
+  animation: vibrate 0.4s ease;
+}
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+  40% { transform: translateX(2px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+  100% { transform: translateX(0); }
 }
