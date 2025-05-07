@@ -120,18 +120,43 @@ h2:hover {
 }
 
 /* Roadmap */
-<section class="roadmap">
-  <div class="roadmap-bg" id="roadmap-bg"></div>
-  <div class="roadmap-inner fade-in">
-    <h2>
-      <a href="#" style="color: white; text-decoration: none; transition: all 0.4s ease;"
-         onmouseover="this.style.textShadow='0 0 20px white'; this.style.transform='scale(1.05)';"
-         onmouseout="this.style.textShadow='none'; this.style.transform='scale(1)';">
-        Roadmap.
-      </a>
-    </h2>
-  </div>
-</section>
+/* ROADMAP PARALLAX */
+.roadmap {
+  position: relative;
+  height: 600px;
+  background-color: #000;
+  overflow: hidden;
+  margin-bottom: 200px;
+}
+
+.roadmap-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('https://i.postimg.cc/L8BG4Rgr/forest.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateY(0);
+  transition: transform 0.1s linear;
+  z-index: 1;
+  opacity: 0.8;
+  will-change: transform;
+}
+
+.roadmap-inner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.roadmap-inner h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+}
 
 
 /* Banner Bereich */
