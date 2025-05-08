@@ -1,10 +1,16 @@
-<script>
-  // Smooth Parallax-Effekt
-  window.addEventListener('scroll', function () {
-    const scrolled = window.scrollY;
-    const roadmapBg = document.getElementById('roadmap-bg');
-    if (roadmapBg) {
-      roadmapBg.style.transform = 'translateY(' + scrolled * 0.3 + 'px)';
+// Fade-in Animation beim Scrollen
+window.addEventListener('scroll', function () {
+  document.querySelectorAll('.fade-in').forEach(function (el) {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
     }
   });
-</script>
+
+  // Parallax Roadmap
+  const parallax = document.getElementById('parallax-bg');
+  if (parallax) {
+    const offset = window.scrollY;
+    parallax.style.transform = 'translateY(' + offset * 0.3 + 'px)';
+  }
+});
