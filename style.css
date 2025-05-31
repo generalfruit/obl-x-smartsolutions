@@ -731,8 +731,9 @@ a:focus, button:focus {
 .slider {
   position: relative;
   width: 100%;
-  height: 600px;
+  min-height: 100vh; /* Fullscreen Höhe */
   overflow: hidden;
+  background-color: black;
 }
 
 .slide {
@@ -817,6 +818,17 @@ a:focus, button:focus {
   border: none;
 }
 
+.arrow.left {
+  left: 20px;
+}
+
+.arrow.right {
+  right: 20px;
+}
+
+.arrow:hover {
+  color: #a084dc;
+}
 .arrow.left {
   left: 20px;
 }
