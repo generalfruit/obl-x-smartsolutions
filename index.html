@@ -125,8 +125,33 @@
 </section>
 
 <!-- Info-Bereich -->
-<section class="min-h-screen flex items-center relative py-20 font-[Poppins]">
-    <!-- ... dein Info-Bereich bleibt gleich (den Textbereich kann ich der Kürze wegen hier auslassen — du kopierst ihn einfach rein wie gehabt) ... -->
+ <section class="min-h-screen flex items-center relative py-20 font-[Poppins]">
+  <div class="container mx-auto px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <div class="inline-block mb-3">
+          <div class="text-xs text-white tracking-widest uppercase mb-1">Info</div>
+          <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#6c4eb6] to-[#a084dc] bg-clip-text text-transparent">About us.</div>
+        </div>
+        <div class="w-20 h-1 bg-gradient-to-r from-[#cbb4f3] to-[#a084dc] mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-6">
+        <div class="card">
+          <img src="https://i.postimg.cc/LX8WLDjb/Code.png" alt="Code" class="card-graffiti mb-4">
+          <p>Design trifft Performance. Schnell. Smart. Suchmaschinen-verliebt.</p>
+        </div>
+        <div class="card">
+          <img src="https://i.postimg.cc/bN74WQjZ/Blog.png" alt="Blog" class="card-graffiti mb-4">
+          <p>Updates & Trends – direkt aus dem Maschinenraum von OBL-X.</p>
+        </div>
+        <div class="card">
+          <img src="https://i.postimg.cc/SQ5PYWRg/Team.png" alt="Team" class="card-graffiti mb-4">
+          <p>Die kreativen Köpfe hinter dem Code.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Roadmap -->
@@ -141,7 +166,94 @@
 
 <!-- Kontaktbereich -->
 <section id="contact" class="min-h-screen flex items-center relative py-20 font-[Poppins]">
-    <!-- ... dein Kontaktbereich bleibt gleich (du kopierst ihn einfach rein wie gehabt) ... -->
+      <div class="container mx-auto px-6">
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-12">
+            <div class="inline-block mb-3">
+              <div class="text-xs text-white tracking-widest uppercase mb-1">Kontakt aufnehmen</div>
+              <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#6c4eb6] to-[#a084dc] bg-clip-text text-transparent">Meet us.</div>
+            </div>
+            <div class="w-20 h-1 bg-gradient-to-r from-[#cbb4f3] to-[#a084dc] mx-auto"></div>
+          </div>
+
+          <div class="grid md:grid-cols-5 gap-8">
+            <div class="md:col-span-2">
+              <div class="bg-gray-900/70 backdrop-blur-lg border border-[#a084dc]/30 p-6 rounded-xl shadow-xl">
+                <div class="text-xl font-medium text-white mb-4">Kontaktinformationen</div>
+                <div class="space-y-4">
+                  <div class="flex items-start">
+                    <svg class="w-5 h-5 text-white mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <div>
+                      <div class="text-sm text-white">Adresse</div>
+                      <div class="text-white">Wendenring 11</div>
+                      <div class="text-white">38114 Braunschweig</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <svg class="w-5 h-5 text-white mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <div>
+                      <div class="text-sm text-white">E-Mail</div>
+                      <a href="mailto:kontakt@oblx-smartsolutions.de"
+                        class="text-white hover:text-[#cbb4f3] transition-colors">kontakt@oblx-smartsolutions.de</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:col-span-3">
+              <div class="bg-gray-900/70 backdrop-blur-lg border border-[#a084dc]/30 p-6 rounded-xl shadow-xl">
+                <div class="text-xl font-medium text-white mb-4">Schreib uns eine Nachricht</div>
+                <form>
+                  <div class="grid md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <label for="name" class="block text-sm text-white mb-1">Name</label>
+                      <input type="text" id="name"
+                        class="w-full bg-gray-800/50 border border-gray-700 focus:border-[#cbb4f3] rounded-lg py-2 px-3 text-white focus:outline-none focus:ring-1 focus:ring-[#cbb4f3]/50 transition-colors">
+                    </div>
+                    <div>
+                      <label for="email" class="block text-sm text-white mb-1">E-Mail</label>
+                      <input type="email" id="email"
+                        class="w-full bg-gray-800/50 border border-gray-700 focus:border-[#cbb4f3] rounded-lg py-2 px-3 text-white focus:outline-none focus:ring-1 focus:ring-[#cbb4f3]/50 transition-colors">
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <label for="subject" class="block text-sm text-white mb-1">Betreff</label>
+                    <input type="text" id="subject"
+                      class="w-full bg-gray-800/50 border border-gray-700 focus:border-[#cbb4f3] rounded-lg py-2 px-3 text-white focus:outline-none focus:ring-1 focus:ring-[#cbb4f3]/50 transition-colors">
+                  </div>
+                  <div class="mb-6">
+                    <label for="message" class="block text-sm text-white mb-1">Nachricht</label>
+                    <textarea id="message" rows="4"
+                      class="w-full bg-gray-800/50 border border-gray-700 focus:border-[#cbb4f3] rounded-lg py-2 px-3 text-white focus:outline-none focus:ring-1 focus:ring-[#cbb4f3]/50 transition-colors resize-none"></textarea>
+                  </div>
+                  <div class="relative group">
+                    <div
+                      class="absolute -inset-0.5 bg-gradient-to-r from-[#a084dc]/40 to-[#cbb4f3]/40 rounded-lg blur opacity-75 group-hover:opacity-100 transition-all duration-500">
+                    </div>
+                    <button type="submit"
+                      class="w-full px-6 py-3 bg-gradient-to-r from-[#6c4eb6]/90 to-[#a084dc]/90 rounded-lg text-white text-base font-medium relative z-10 flex items-center justify-center gap-2 group-hover:from-[#5c3ca2]/90 group-hover:to-[#9272c7]/90 transition-all duration-300">
+                      <span class="bg-gradient-to-r from-[#cbb4f3] to-[#ffffff] bg-clip-text text-transparent">Nachricht
+                        senden</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div> <!-- <- Ende von .container in #services -->
 </section>
 
 <!-- Footer -->
