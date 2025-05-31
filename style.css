@@ -946,4 +946,29 @@ a:focus, button:focus {
   }
 }
 
+/* === FIX: Z-Index Probleme Parallax & Slider === */
+.slider {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  z-index: 20;
+}
 
+.parallax__fade {
+  z-index: 10;
+}
+
+.parallax__layers {
+  z-index: 10;
+}
+
+.parallax__radial-gradient {
+  z-index: 5;
+}
+
+.parallax__visuals {
+  z-index: 10;
+}
+/* === END FIX === */
