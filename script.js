@@ -32,36 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // FPS Debug Overlay
-  setTimeout(() => {
-    const stats = document.createElement('div');
-    stats.style.position = 'fixed';
-    stats.style.top = '10px';
-    stats.style.right = '10px';
-    stats.style.padding = '5px 10px';
-    stats.style.background = 'rgba(0,0,0,0.6)';
-    stats.style.color = '#0ff';
-    stats.style.fontSize = '12px';
-    stats.style.fontFamily = 'monospace';
-    stats.style.zIndex = '9999';
-    document.body.appendChild(stats);
-
-    let lastFrame = performance.now();
-    let frames = 0;
-    let fps = 0;
-    function updateFPS() {
-      const now = performance.now();
-      frames++;
-      if (now - lastFrame >= 1000) {
-        fps = frames;
-        frames = 0;
-        lastFrame = now;
-        stats.textContent = `FPS: ${fps}`;
-      }
-      requestAnimationFrame(updateFPS);
-    }
-    updateFPS();
-  }, 500);
+ 
 
   // Nav Link Highlight on Scroll
   const navLinks = document.querySelectorAll("nav a[href^='#']");
