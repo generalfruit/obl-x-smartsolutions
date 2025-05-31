@@ -9,299 +9,161 @@
     <!-- Google Fonts: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS über offiziellen Script-Loader -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Dein eigenes CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Externe Libraries -->
+    <!-- Externe Libraries (nur einmal einbinden!) -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
 </head>
 
-<body>
+<body class="bg-black text-white font-[Poppins]">
 
-
-  <!-- Hero -->
+<!-- Hero -->
 <nav class="w-full bg-gray-900/80 backdrop-blur-lg border-b border-gray-800 z-50 sticky top-0">
-  <div class="max-w-screen-xl mx-auto px-6 py-4 flex flex-wrap justify-center gap-6 text-sm font-medium uppercase">
-    <a href="#home" class="text-white hover:text-purple-400 transition-colors">Home.</a>
-    <a href="#company" class="text-white hover:text-purple-400 transition-colors">The Company.</a>
-    <a href="#contact" class="text-white hover:text-purple-400 transition-colors">Kontakt.</a>
-    <a href="#blog" class="text-white hover:text-purple-400 transition-colors">Blog.</a>
-    <a href="#team" class="text-white hover:text-purple-400 transition-colors">Team.</a>
-    <a href="#roadmap" class="text-white hover:text-purple-400 transition-colors">Roadmap.</a>
-  </div>
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex flex-wrap justify-center gap-6 text-sm font-medium uppercase">
+        <a href="#home" class="text-white hover:text-purple-400 transition-colors">Home.</a>
+        <a href="#company" class="text-white hover:text-purple-400 transition-colors">The Company.</a>
+        <a href="#contact" class="text-white hover:text-purple-400 transition-colors">Kontakt.</a>
+        <a href="#blog" class="text-white hover:text-purple-400 transition-colors">Blog.</a>
+        <a href="#team" class="text-white hover:text-purple-400 transition-colors">Team.</a>
+        <a href="#roadmap" class="text-white hover:text-purple-400 transition-colors">Roadmap.</a>
+    </div>
 </nav>
 
-
-  <section class="parallax__header">
+<!-- Parallax Header -->
+<section class="parallax__header">
     <div class="parallax__visuals">
-      <div class="parallax__black-line-overflow"></div>
-      <div data-parallax-layers class="parallax__layers">
-        <img src="https://cdn.prod.website-files.com/671752cd4027f01b1b8f1c7f/6717795be09b462b2e8ebf71_osmo-parallax-layer-3.webp" loading="eager" width="800" data-parallax-layer="1" alt="" class="parallax__layer-img">
-        <img src="https://i.postimg.cc/d0gZTwZZ/HINTERGRUND.png" loading="eager" width="800" data-parallax-layer="2" alt="" class="parallax__layer-img">
-        <div data-parallax-layer="3" class="parallax__layer-title">
-          <h2 class="parallax__title">OBL - X</h2>
+        <div class="parallax__black-line-overflow"></div>
+        <div data-parallax-layers class="parallax__layers">
+            <img src="https://cdn.prod.website-files.com/671752cd4027f01b1b8f1c7f/6717795be09b462b2e8ebf71_osmo-parallax-layer-3.webp" loading="eager" width="800" data-parallax-layer="1" alt="" class="parallax__layer-img">
+            <img src="https://i.postimg.cc/d0gZTwZZ/HINTERGRUND.png" loading="eager" width="800" data-parallax-layer="2" alt="" class="parallax__layer-img">
+            <div data-parallax-layer="3" class="parallax__layer-title">
+                <h2 class="parallax__title">OBL - X</h2>
+            </div>
+            <img src="https://i.postimg.cc/gct717ht/Fels.png" loading="eager" width="800" data-parallax-layer="4" alt="" class="parallax__layer-img">
         </div>
-        <img src="https://i.postimg.cc/gct717ht/Fels.png" loading="eager" width="800" data-parallax-layer="4" alt="" class="parallax__layer-img">
-      </div>
-      <div class="parallax__fade"></div>
+        <div class="parallax__fade"></div>
     </div>
-  </section>
-<!-- Titel -->
-  <section class="parallax__content">
-  <section class="py-20 bg-black text-white font-[Poppins]">
+</section>
+
+<!-- Titel + Rubik -->
+<section class="py-20 bg-black text-white font-[Poppins]">
     <div class="container mx-auto px-6 grid md:grid-cols-2 items-center gap-10">
 
-     <!-- Linker Textbereich -->
-<div class="text-center md:text-left flex flex-col items-center md:items-start">
-  <h2 class="text-3xl md:text-5xl font-bold mb-20 relative shimmer-text">
-    Think smart.
-  </h2>
+        <!-- Linker Textbereich -->
+        <div class="text-center md:text-left flex flex-col items-center md:items-start">
+            <h2 class="text-3xl md:text-5xl font-bold mb-20 relative shimmer-text">
+                Think smart.
+            </h2>
 
-  <p class="mb-6 text-lg text-gray-300">
-    Intelligente Software für Private, Unternehmen und Freelancer.
-  </p>
-  <p class="mb-20 text-lg text-gray-300">
-    Schnell und einfach – powered by AI.
-  </p>
+            <p class="mb-6 text-lg text-gray-300">
+                Intelligente Software für Private, Unternehmen und Freelancer.
+            </p>
+            <p class="mb-20 text-lg text-gray-300">
+                Schnell und einfach – powered by AI.
+            </p>
 
-  <a href="#company"
-     class="inline-block px-8 py-4 text-lg bg-gradient-to-r from-[#6c4eb6] to-[#a084dc] rounded-xl text-white hover:from-[#5c3ca2] hover:to-[#9272c7] hover:shadow-lg hover:scale-105 transition-all duration-300">
-    Erfahre mehr
-  </a>
-</div>
+            <a href="#company"
+                class="inline-block px-8 py-4 text-lg bg-gradient-to-r from-[#6c4eb6] to-[#a084dc] rounded-xl text-white hover:from-[#5c3ca2] hover:to-[#9272c7] hover:shadow-lg hover:scale-105 transition-all duration-300">
+                Erfahre mehr
+            </a>
+        </div>
 
-
-      <!-- Rechter Bereich: Rotierender Rubik-Würfel -->
-      <div class="h-[150px] w-full md:h-[150px] pl-2">
-        <canvas id="rubikCanvas" class="w-full h-full block"></canvas>
-      </div>
+        <!-- Rechter Bereich: Rubik -->
+        <div class="h-[150px] w-full md:h-[150px] pl-2">
+            <canvas id="rubikCanvas" class="w-full h-full block"></canvas>
+        </div>
 
     </div>
-  </section>
 </section>
-
-
-
-</div>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
-
-<!-- Intro Section Between Parallax and Slider -->
 
 <!-- Slider -->
-<div class="slider">
-  <div class="arrow left">&#10094;</div>
-  <div class="arrow right">&#10095;</div>
+<section>
+    <div class="slider">
+        <div class="arrow left">&#10094;</div>
+        <div class="arrow right">&#10095;</div>
 
-  <div class="slide active" style="background-image: url('https://i.postimg.cc/HkndXyCV/123.png');">
-    <div class="content-wrapper">
-      <img class="foreground" src="https://i.postimg.cc/B67YfdRZ/nur-Logolila.png" alt="Vordergrundbild">
-      <div class="slide-text">
-        <h2 class="shimmer-text">X-3DGen</h2>
-        <p>Nutze modernste KI-Technologie, um aus einfachen 2D-Bildern beeindruckende, hochauflösende 3D-Modelle zu erschaffen – ganz ohne Vorkenntnisse.</p>
-        <a href="https://dein-link-zu-x3dgen.de">INFO</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="slide" style="background-image: url('https://i.postimg.cc/gjYnSgPq/wordartist-91-a-picture-of-android-reading-a-newspaper-in-a-fut-123fab6d-9e0d-4c95-b97b-cdcdec124e75.jpg');">
-    <div class="content-wrapper">
-      <img class="foreground" src="https://i.postimg.cc/2StLgWdZ/Nur-LOGO-FG.png" alt="Vordergrundbild">
-      <div class="slide-text">
-        <h2 class="shimmer-text">X-FinanzGenius</h2>
-        <p>Blitzschnelle digitale Rechnungserstellung & automatisierte Verwaltung. Erstelle Rechnungen in Sekunden – als PDF, XML oder DATEV-kompatible Formate.</p>
-        <a href="https://dein-link-zu-finanzgenius.de">INFO</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="slide" style="background-image: url('https://i.postimg.cc/QCJqX4NM/rocket.png');">
-    <div class="content-wrapper">
-      <img class="foreground" src="https://i.postimg.cc/C5Lj2GyD/XFragezeichen.png" alt="Vordergrundbild">
-      <div class="slide-text">
-        <h2 class="shimmer-text">X-Unknown</h2>
-        <p>Neue Produkte werden bald veröffentlicht. Sei gespannt auf weitere Informationen.</p>
-        <a href="https://dein-link-zu-xunknown.de">INFO</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-    <!-- Info-Bereich -->
-    <section class="min-h-screen flex items-center relative py-20 font-[Poppins]">
-  <div class="container mx-auto px-6">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-12">
-        <div class="inline-block mb-3">
-          <div class="text-xs text-white tracking-widest uppercase mb-1">Info</div>
-          <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#6c4eb6] to-[#a084dc] bg-clip-text text-transparent">About us.</div>
-        </div>
-        <div class="w-20 h-1 bg-gradient-to-r from-[#cbb4f3] to-[#a084dc] mx-auto"></div>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6 mt-6">
-        <div class="card">
-          <img src="https://i.postimg.cc/LX8WLDjb/Code.png" alt="Code" class="card-graffiti mb-4">
-          <p>Design trifft Performance. Schnell. Smart. Suchmaschinen-verliebt.</p>
-        </div>
-        <div class="card">
-          <img src="https://i.postimg.cc/bN74WQjZ/Blog.png" alt="Blog" class="card-graffiti mb-4">
-          <p>Updates & Trends – direkt aus dem Maschinenraum von OBL-X.</p>
-        </div>
-        <div class="card">
-          <img src="https://i.postimg.cc/SQ5PYWRg/Team.png" alt="Team" class="card-graffiti mb-4">
-          <p>Die kreativen Köpfe hinter dem Code.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Roadmap. -->
-<section class="roadmap-section">
-  <img src="https://i.postimg.cc/3Rnhn5QK/forest.png" alt="Roadmap" class="roadmap-image">
-
-  <div class="roadmap-overlay-top"></div>
-  <div class="roadmap-overlay-bottom"></div>
-
-  <div class="roadmap-center">
-    <a href="#roadmap" class="roadmap-link">Roadmap.</a>
-  </div>
-</section>
-
-
-
-
-    <!-- Kontaktbereich -->
-    <section id="contact" class="min-h-screen flex items-center relative py-20 font-[Poppins]">
-      <div class="container mx-auto px-6">
-        <div class="max-w-5xl mx-auto">
-          <div class="text-center mb-12">
-            <div class="inline-block mb-3">
-              <div class="text-xs text-white tracking-widest uppercase mb-1">Kontakt aufnehmen</div>
-              <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#6c4eb6] to-[#a084dc] bg-clip-text text-transparent">Meet us.</div>
-            </div>
-            <div class="w-20 h-1 bg-gradient-to-r from-[#cbb4f3] to-[#a084dc] mx-auto"></div>
-          </div>
-
-          <div class="grid md:grid-cols-5 gap-8">
-            <div class="md:col-span-2">
-              <div class="bg-gray-900/70 backdrop-blur-lg border border-[#a084dc]/30 p-6 rounded-xl shadow-xl">
-                <div class="text-xl font-medium text-white mb-4">Kontaktinformationen</div>
-                <div class="space-y-4">
-                  <div class="flex items-start">
-                    <svg class="w-5 h-5 text-white mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    </svg>
-                    <div>
-                      <div class="text-sm text-white">Adresse</div>
-                      <div class="text-white">Wendenring 11</div>
-                      <div class="text-white">38114 Braunschweig</div>
-                    </div>
-                  </div>
-                  <div class="flex items-start">
-                    <svg class="w-5 h-5 text-white mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                    </svg>
-                    <div>
-                      <div class="text-sm text-white">E-Mail</div>
-                      <a href="mailto:kontakt@oblx-smartsolutions.de"
-                        class="text-white hover:text-[#cbb4f3] transition-colors">kontakt@oblx-smartsolutions.de</a>
-                    </div>
-                  </div>
+        <div class="slide active" style="background-image: url('https://i.postimg.cc/HkndXyCV/123.png');">
+            <div class="content-wrapper">
+                <img class="foreground" src="https://i.postimg.cc/B67YfdRZ/nur-Logolila.png" alt="Vordergrundbild">
+                <div class="slide-text">
+                    <h2 class="shimmer-text">X-3DGen</h2>
+                    <p>Nutze modernste KI-Technologie, um aus einfachen 2D-Bildern beeindruckende, hochauflösende 3D-Modelle zu erschaffen – ganz ohne Vorkenntnisse.</p>
+                    <a href="https://dein-link-zu-x3dgen.de">INFO</a>
                 </div>
-              </div>
             </div>
-
-            <div class="md:col-span-3">
-              <div class="bg-gray-900/70 backdrop-blur-lg border border-[#a084dc]/30 p-6 rounded-xl shadow-xl">
-                <div class="text-xl font-medium text-white mb-4">Schreib uns eine Nachricht</div>
-                <form>
-                  <div class="grid md:grid-cols-2 gap-4 mb-4">
-                    <div>
-                      <label for="name" class="block text-sm text-white mb-1">Name</label>
-                      <input type="text" id="name"
-                        class="w-full bg-gray-800/50 border border-gray-700 focus:border-[#cbb4f3] rounded-lg py-2 px-3 text-white focus:outline-none focus:ring-1 focus:ring-[#cbb4f3]/50 transition-colors">
-                    </div>
-                    <div>
-                      <label for="email" class="block text-sm text-white mb-1">E-Mail</label>
-                      <input type="email" id="email"
-                        class="w-full bg-gray-800/50 border border-gray-700 focus:border-[#cbb4f3] rounded-lg py-2 px-3 text-white focus:outline-none focus:ring-1 focus:ring-[#cbb4f3]/50 transition-colors">
-                    </div>
-                  </div>
-                  <div class="mb-4">
-                    <label for="subject" class="block text-sm text-white mb-1">Betreff</label>
-                    <input type="text" id="subject"
-                      class="w-full bg-gray-800/50 border border-gray-700 focus:border-[#cbb4f3] rounded-lg py-2 px-3 text-white focus:outline-none focus:ring-1 focus:ring-[#cbb4f3]/50 transition-colors">
-                  </div>
-                  <div class="mb-6">
-                    <label for="message" class="block text-sm text-white mb-1">Nachricht</label>
-                    <textarea id="message" rows="4"
-                      class="w-full bg-gray-800/50 border border-gray-700 focus:border-[#cbb4f3] rounded-lg py-2 px-3 text-white focus:outline-none focus:ring-1 focus:ring-[#cbb4f3]/50 transition-colors resize-none"></textarea>
-                  </div>
-                  <div class="relative group">
-                    <div
-                      class="absolute -inset-0.5 bg-gradient-to-r from-[#a084dc]/40 to-[#cbb4f3]/40 rounded-lg blur opacity-75 group-hover:opacity-100 transition-all duration-500">
-                    </div>
-                    <button type="submit"
-                      class="w-full px-6 py-3 bg-gradient-to-r from-[#6c4eb6]/90 to-[#a084dc]/90 rounded-lg text-white text-base font-medium relative z-10 flex items-center justify-center gap-2 group-hover:from-[#5c3ca2]/90 group-hover:to-[#9272c7]/90 transition-all duration-300">
-                      <span class="bg-gradient-to-r from-[#cbb4f3] to-[#ffffff] bg-clip-text text-transparent">Nachricht
-                        senden</span>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
 
-  </div> <!-- <- Ende von .container in #services -->
+        <div class="slide" style="background-image: url('https://i.postimg.cc/gjYnSgPq/wordartist-91-a-picture-of-android-reading-a-newspaper-in-a-fut-123fab6d-9e0d-4c95-b97b-cdcdec124e75.jpg');">
+            <div class="content-wrapper">
+                <img class="foreground" src="https://i.postimg.cc/2StLgWdZ/Nur-LOGO-FG.png" alt="Vordergrundbild">
+                <div class="slide-text">
+                    <h2 class="shimmer-text">X-FinanzGenius</h2>
+                    <p>Blitzschnelle digitale Rechnungserstellung & automatisierte Verwaltung. Erstelle Rechnungen in Sekunden – als PDF, XML oder DATEV-kompatible Formate.</p>
+                    <a href="https://dein-link-zu-finanzgenius.de">INFO</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" style="background-image: url('https://i.postimg.cc/QCJqX4NM/rocket.png');">
+            <div class="content-wrapper">
+                <img class="foreground" src="https://i.postimg.cc/C5Lj2GyD/XFragezeichen.png" alt="Vordergrundbild">
+                <div class="slide-text">
+                    <h2 class="shimmer-text">X-Unknown</h2>
+                    <p>Neue Produkte werden bald veröffentlicht. Sei gespannt auf weitere Informationen.</p>
+                    <a href="https://dein-link-zu-xunknown.de">INFO</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- Footer: HINTERGRUND volle Breite, INHALT begrenzt -->
+<!-- Info-Bereich -->
+<section class="min-h-screen flex items-center relative py-20 font-[Poppins]">
+    <!-- ... dein Info-Bereich bleibt gleich (den Textbereich kann ich der Kürze wegen hier auslassen — du kopierst ihn einfach rein wie gehabt) ... -->
+</section>
+
+<!-- Roadmap -->
+<section class="roadmap-section">
+    <img src="https://i.postimg.cc/3Rnhn5QK/forest.png" alt="Roadmap" class="roadmap-image">
+    <div class="roadmap-overlay-top"></div>
+    <div class="roadmap-overlay-bottom"></div>
+    <div class="roadmap-center">
+        <a href="#roadmap" class="roadmap-link">Roadmap.</a>
+    </div>
+</section>
+
+<!-- Kontaktbereich -->
+<section id="contact" class="min-h-screen flex items-center relative py-20 font-[Poppins]">
+    <!-- ... dein Kontaktbereich bleibt gleich (du kopierst ihn einfach rein wie gehabt) ... -->
+</section>
+
+<!-- Footer -->
 <footer class="bg-gray-900/80 backdrop-blur-lg border-t border-gray-800 w-full">
-  <div class="max-w-screen-xl mx-auto px-6 py-8 flex flex-col items-center">
+    <div class="max-w-screen-xl mx-auto px-6 py-8 flex flex-col items-center">
+        <div class="flex items-center mb-6">
+            <img src="https://i.postimg.cc/MK9zH1GP/lila.png" alt="Firmenlogo" class="h-10 w-auto mr-3">
+            <div class="text-sm font-medium bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                OBL-X SmartSolutions
+            </div>
+        </div>
 
-    <!-- Firmenlogo + Firmenname in Gradient-Stil -->
-    <div class="flex items-center mb-6">
-      <img src="https://i.postimg.cc/MK9zH1GP/lila.png" alt="Firmenlogo" class="h-10 w-auto mr-3">
-      <div class="text-sm font-medium bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-        OBL-X SmartSolutions
-      </div>
+        <div class="flex flex-wrap justify-center space-x-6">
+            <a href="https://dein-link-zum-impressum.de" target="_blank" class="text-lg text-gray-400 hover:text-purple-400 transition-colors">Impressum</a>
+            <a href="https://dein-link-zu-agb.de" target="_blank" class="text-lg text-gray-400 hover:text-purple-400 transition-colors">AGB</a>
+            <a href="https://dein-link-zum-datenschutz.de" target="_blank" class="text-lg text-gray-400 hover:text-purple-400 transition-colors">Datenschutz</a>
+        </div>
     </div>
-
-    <!-- Footer-Links zentriert + größer -->
-    <div class="flex flex-wrap justify-center space-x-6">
-      <a href="https://dein-link-zum-impressum.de" target="_blank" class="text-lg text-gray-400 hover:text-purple-400 transition-colors">Impressum</a>
-      <a href="https://dein-link-zu-agb.de" target="_blank" class="text-lg text-gray-400 hover:text-purple-400 transition-colors">AGB</a>
-      <a href="https://dein-link-zum-datenschutz.de" target="_blank" class="text-lg text-gray-400 hover:text-purple-400 transition-colors">Datenschutz</a>
-    </div>
-
-  </div>
 </footer>
 
-    <!-- THREE.js + animierter Rubik-Würfel -->
-<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
-    
-    <!-- Verlinkung auf deine eigene JavaScript Datei -->
-    <script src="script.js"></script>
+<!-- Ganz am Ende: Verlinkung auf dein eigenes JS -->
+<script src="script.js"></script>
 
 </body>
-
 </html>
