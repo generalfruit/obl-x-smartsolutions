@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Register GSAP Plugins
   gsap.registerPlugin(ScrollTrigger);
 
-  // Parallax Layers with ScrollTrigger (without Lenis)
+  // Parallax Layers with ScrollTrigger
   document.querySelectorAll('[data-parallax-layers]').forEach((triggerElement) => {
     let tl = gsap.timeline({
       scrollTrigger: {
@@ -63,135 +63,30 @@ document.addEventListener("DOMContentLoaded", () => {
     updateFPS();
   }, 500);
 
-  // DOM Elements
-  const navbar = document.getElementById('navbar');
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const navLinks = document.querySelectorAll('.nav-link');
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-  const sections = document.querySelectorAll('section');
+  // Nav Link Highlight on Scroll
+  const navLinks = document.querySelectorAll("nav a[href^='#']");
 
-  // Mobile Menu Toggle
-  if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenuButton.classList.toggle('active');
-
-      if (mobileMenu.classList.contains('open')) {
-        mobileMenu.style.height = '0';
-        mobileMenu.classList.remove('open');
-      } else {
-        mobileMenu.classList.add('open');
-        mobileMenu.style.height = `${mobileMenu.scrollHeight}px`;
-      }
-    });
-  }
-
-  // Close mobile menu when a link is clicked
-  mobileNavLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.classList.remove('active');
-        mobileMenu.style.height = '0';
-        mobileMenu.classList.remove('open');
-      }
-    });
-  });
-
-  // Smooth Scroll for nav links (native)
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute('href');
-      const targetSection = document.querySelector(targetId);
-
-      if (targetSection) {
-        targetSection.scrollIntoView({ behavior: 'smooth' });
-        targetSection.classList.add('section-highlight');
-        setTimeout(() => {
-          targetSection.classList.remove('section-highlight');
-        }, 1000);
-      }
-    });
-  });
-
-  // Navbar scroll effect
-  window.addEventListener('scroll', () => {
-    if (!navbar) return;
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-    highlightCurrentSection(window.scrollY);
-  });
-
-  // Highlight active section in navbar
-  function highlightCurrentSection(scrollY) {
-    let current = '';
-
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
-      const sectionHeight = section.offsetHeight;
-
-      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        current = section.getAttribute('id');
-      }
-    });
-
+  function onScroll() {
+    const scrollPos = window.scrollY + 100;
     navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
-      }
-    });
-
-    mobileNavLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
+      const section = document.querySelector(link.getAttribute("href"));
+      if (section) {
+        if (
+          scrollPos >= section.offsetTop &&
+          scrollPos < section.offsetTop + section.offsetHeight
+        ) {
+          link.classList.add("text-cyan-400");
+        } else {
+          link.classList.remove("text-cyan-400");
+        }
       }
     });
   }
 
-  // Make header text visible with animation
-  setTimeout(() => {
-    const headerText = document.querySelector('.text-6xl');
-    if (headerText) {
-      headerText.style.opacity = 1;
-      headerText.style.transform = 'translateY(0)';
-    }
-  }, 300);
-});
+  window.addEventListener("scroll", onScroll);
+  onScroll();
 
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const navLinks = document.querySelectorAll("nav a[href^='#']");
-
-    function onScroll() {
-      const scrollPos = window.scrollY + 100;
-      navLinks.forEach(link => {
-        const section = document.querySelector(link.getAttribute("href"));
-        if (section) {
-          if (
-            scrollPos >= section.offsetTop &&
-            scrollPos < section.offsetTop + section.offsetHeight
-          ) {
-            link.classList.add("text-cyan-400");
-          } else {
-            link.classList.remove("text-cyan-400");
-          }
-        }
-      });
-    }
-
-    window.addEventListener("scroll", onScroll);
-    onScroll();
-  });
-</script>
-<!-- THREE.js + animierter Rubik-Würfel -->
-<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
-<script>
+  // THREE.js + Rubik Cube
   const canvas = document.getElementById('rubikCanvas');
   const scene = new THREE.Scene();
 
@@ -212,13 +107,12 @@ document.addEventListener("DOMContentLoaded", () => {
   renderer.setPixelRatio(window.devicePixelRatio);
 
   const cubeGroup = new THREE.Group();
-  const spacing = 0.35;
+  const spacing = 0.5;
 
   for (let x = -1; x <= 1; x++) {
     for (let y = -1; y <= 1; y++) {
       for (let z = -1; z <= 1; z++) {
         const geom = new THREE.BoxGeometry(0.45, 0.45, 0.45);
-const spacing = 0.5;
         const edges = new THREE.EdgesGeometry(geom);
         const material = new THREE.LineBasicMaterial({ color: 0xffffff });
         const miniCube = new THREE.LineSegments(edges, material);
@@ -230,12 +124,10 @@ const spacing = 0.5;
 
   scene.add(cubeGroup);
 
-  // Startrotation und Position
   cubeGroup.rotation.set(Math.PI / 6, Math.PI / 3, Math.PI / 8);
   cubeGroup.position.x = 0.5;
   camera.position.z = 2;
 
-  // Animation
   function animate() {
     requestAnimationFrame(animate);
     cubeGroup.rotation.x += 0.01;
@@ -244,7 +136,6 @@ const spacing = 0.5;
   }
   animate();
 
-  // Responsives Verhalten
   window.addEventListener('resize', () => {
     const width = canvas.clientWidth;
     const height = canvas.clientHeight;
@@ -252,7 +143,9 @@ const spacing = 0.5;
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
   });
-   const slides = document.querySelectorAll('.slide');
+
+  // Slider
+  const slides = document.querySelectorAll('.slide');
   const nextBtn = document.querySelector('.arrow.right');
   const prevBtn = document.querySelector('.arrow.left');
   let current = 0;
@@ -287,4 +180,5 @@ const spacing = 0.5;
     clearInterval(interval);
     interval = setInterval(nextSlide, 12000);
   }
-</script>
+
+});
