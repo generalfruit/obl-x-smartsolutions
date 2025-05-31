@@ -15,7 +15,7 @@
     <!-- Dein eigenes CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Externe Libraries (nur einmal einbinden!) -->
+    <!-- Externe Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
@@ -37,7 +37,7 @@
 </nav>
 
 <!-- Parallax Header -->
-<section class="parallax__header">
+<section class="parallax__header max-w-screen-xl mx-auto">
     <div class="parallax__visuals">
         <div class="parallax__black-line-overflow"></div>
         <div data-parallax-layers class="parallax__layers">
@@ -53,8 +53,8 @@
 </section>
 
 <!-- Titel + Rubik -->
-<section class="py-20 bg-black text-white font-[Poppins]">
-    <div class="container mx-auto px-6 grid md:grid-cols-2 items-center gap-10">
+<section class="py-20 font-[Poppins] max-w-screen-xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 items-center gap-10">
 
         <!-- Linker Textbereich -->
         <div class="text-center md:text-left flex flex-col items-center md:items-start">
@@ -75,8 +75,8 @@
             </a>
         </div>
 
-        <!-- Rechter Bereich: Rubik -->
-        <div class="h-[150px] w-full md:h-[150px] pl-2">
+        <!-- Rechter Bereich: Rubik (nur Desktop sichtbar) -->
+        <div class="hidden md:block h-[150px] w-full pl-2">
             <canvas id="rubikCanvas" class="w-full h-full block"></canvas>
         </div>
 
@@ -84,54 +84,37 @@
 </section>
 
 <!-- Slider -->
-<section>
-    <div class="slider">
-        <div class="arrow left">&#10094;</div>
-        <div class="arrow right">&#10095;</div>
+<section class="max-w-screen-xl mx-auto px-6 py-10">
+    <div class="slider relative">
+        <div class="arrow left absolute top-1/2 left-2 transform -translate-y-1/2 text-3xl cursor-pointer z-10">&#10094;</div>
+        <div class="arrow right absolute top-1/2 right-2 transform -translate-y-1/2 text-3xl cursor-pointer z-10">&#10095;</div>
 
-        <div class="slide active" style="background-image: url('https://i.postimg.cc/HkndXyCV/123.png');">
-            <div class="content-wrapper">
-                <img class="foreground" src="https://i.postimg.cc/B67YfdRZ/nur-Logolila.png" alt="Vordergrundbild">
-                <div class="slide-text">
-                    <h2 class="shimmer-text">X-3DGen</h2>
-                    <p>Nutze modernste KI-Technologie, um aus einfachen 2D-Bildern beeindruckende, hochauflösende 3D-Modelle zu erschaffen – ganz ohne Vorkenntnisse.</p>
-                    <a href="https://dein-link-zu-x3dgen.de">INFO</a>
+        <!-- Slides -->
+        <div class="slide active relative bg-cover bg-center h-96 md:h-[500px]" style="background-image: url('https://i.postimg.cc/HkndXyCV/123.png');">
+            <div class="content-wrapper absolute inset-0 flex flex-col justify-center items-center bg-black/50">
+                <img class="foreground mb-4 w-24 h-24 object-contain" src="https://i.postimg.cc/B67YfdRZ/nur-Logolila.png" alt="Vordergrundbild">
+                <div class="slide-text text-center text-white">
+                    <h2 class="text-2xl md:text-4xl shimmer-text mb-2">X-3DGen</h2>
+                    <p class="mb-4">Nutze modernste KI-Technologie, um aus einfachen 2D-Bildern beeindruckende, hochauflösende 3D-Modelle zu erschaffen – ganz ohne Vorkenntnisse.</p>
+                    <a href="https://dein-link-zu-x3dgen.de" class="underline text-purple-400">INFO</a>
                 </div>
             </div>
         </div>
 
-        <div class="slide" style="background-image: url('https://i.postimg.cc/gjYnSgPq/wordartist-91-a-picture-of-android-reading-a-newspaper-in-a-fut-123fab6d-9e0d-4c95-b97b-cdcdec124e75.jpg');">
-            <div class="content-wrapper">
-                <img class="foreground" src="https://i.postimg.cc/2StLgWdZ/Nur-LOGO-FG.png" alt="Vordergrundbild">
-                <div class="slide-text">
-                    <h2 class="shimmer-text">X-FinanzGenius</h2>
-                    <p>Blitzschnelle digitale Rechnungserstellung & automatisierte Verwaltung. Erstelle Rechnungen in Sekunden – als PDF, XML oder DATEV-kompatible Formate.</p>
-                    <a href="https://dein-link-zu-finanzgenius.de">INFO</a>
-                </div>
-            </div>
-        </div>
+        <!-- Weitere Slides einfach genauso lassen -->
+        <!-- ... -->
 
-        <div class="slide" style="background-image: url('https://i.postimg.cc/QCJqX4NM/rocket.png');">
-            <div class="content-wrapper">
-                <img class="foreground" src="https://i.postimg.cc/C5Lj2GyD/XFragezeichen.png" alt="Vordergrundbild">
-                <div class="slide-text">
-                    <h2 class="shimmer-text">X-Unknown</h2>
-                    <p>Neue Produkte werden bald veröffentlicht. Sei gespannt auf weitere Informationen.</p>
-                    <a href="https://dein-link-zu-xunknown.de">INFO</a>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 
 <!-- Info-Bereich -->
-<section class="min-h-screen flex items-center relative py-20 font-[Poppins]">
-    <!-- ... dein Info-Bereich bleibt gleich (den Textbereich kann ich der Kürze wegen hier auslassen — du kopierst ihn einfach rein wie gehabt) ... -->
+<section class="min-h-screen flex items-center relative py-20 font-[Poppins] max-w-screen-xl mx-auto px-6">
+    <!-- HIER kopierst du wie gehabt deinen Info-Bereich rein -->
 </section>
 
 <!-- Roadmap -->
-<section class="roadmap-section">
-    <img src="https://i.postimg.cc/3Rnhn5QK/forest.png" alt="Roadmap" class="roadmap-image">
+<section class="roadmap-section max-w-screen-xl mx-auto">
+    <img src="https://i.postimg.cc/3Rnhn5QK/forest.png" alt="Roadmap" class="roadmap-image w-full object-cover">
     <div class="roadmap-overlay-top"></div>
     <div class="roadmap-overlay-bottom"></div>
     <div class="roadmap-center">
@@ -140,8 +123,8 @@
 </section>
 
 <!-- Kontaktbereich -->
-<section id="contact" class="min-h-screen flex items-center relative py-20 font-[Poppins]">
-    <!-- ... dein Kontaktbereich bleibt gleich (du kopierst ihn einfach rein wie gehabt) ... -->
+<section id="contact" class="min-h-screen flex items-center relative py-20 font-[Poppins] max-w-screen-xl mx-auto px-6">
+    <!-- HIER kopierst du wie gehabt deinen Kontaktbereich rein -->
 </section>
 
 <!-- Footer -->
@@ -162,7 +145,7 @@
     </div>
 </footer>
 
-<!-- Ganz am Ende: Verlinkung auf dein eigenes JS -->
+<!-- Verlinkung auf dein eigenes JS -->
 <script src="script.js"></script>
 
 </body>
