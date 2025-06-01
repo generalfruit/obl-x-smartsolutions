@@ -985,3 +985,52 @@ a:focus, button:focus {
   height: auto;
   display: block;
 }
+.flip-card {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  padding-top: 125%; /* Verhältnis 4:5 Höhe (kannst du anpassen) */
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: rgba(17, 24, 39, 0.8); /* dein dunkler Hintergrund */
+  border: 1px solid rgba(160, 132, 220, 0.3); /* dezente lila Border */
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.flip-card-front img,
+.flip-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Hover: dezent heller machen */
+.flip-card:hover .flip-card-inner {
+  box-shadow: 0 0 12px rgba(160, 132, 220, 0.3);
+}
