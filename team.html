@@ -119,58 +119,6 @@
     </div>
 </footer>
 
-<!-- Flip Card CSS -->
-<style>
-.flip-card {
-    perspective: 1000px;
-    cursor: pointer;
-    aspect-ratio: 4 / 5; /* oder 3/4, wie du magst */
-    position: relative;
-}
-
-.flip-card-inner {
-    position: absolute;
-    inset: 0;
-    transform-style: preserve-3d;
-    transition: transform 1s;
-}
-
-.flip-card-inner.flipped {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    inset: 0;
-    backface-visibility: hidden;
-    transition: opacity 0.5s ease;
-}
-
-.flip-card-front img,
-.flip-card-back img {
-    display: block;
-    width: 100%;
-    height: 100%; /* jetzt FÜLLT es perfekt die Karte! */
-    object-fit: cover; /* damit nichts verzerrt ist */
-    border-radius: 0.75rem;
-}
-
-.flip-card-back {
-    transform: rotateY(180deg);
-    z-index: 2;
-}
-
-.flip-card-front {
-    z-index: 1;
-}
-
-/* Hover-Effekt */
-.flip-card:hover .flip-card-inner {
-    box-shadow: 0 0 12px rgba(160, 132, 220, 0.3);
-}
-</style>
-
 
 </body>
 </html>
