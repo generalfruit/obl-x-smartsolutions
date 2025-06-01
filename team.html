@@ -23,16 +23,15 @@
     <div class="max-w-screen-xl mx-auto px-6 py-4 flex flex-wrap justify-center gap-6 text-sm font-medium uppercase">
         <a href="index.html" class="text-white hover:text-purple-400 transition-colors">Home.</a>
         <a href="team.html" class="text-white hover:text-purple-400 transition-colors">Team.</a>
-        <!-- Weitere Links möglich -->
     </div>
 </nav>
 
 <!-- Team Section -->
 <section class="pt-32 pb-32 bg-black text-white font-[Poppins] min-h-screen">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-        <h1 class="text-5xl md:text-6xl font-bold mb-10 shimmer-text">Unser Team</h1>
+    <div class="container mx-auto px-6 max-w-5xl">
+        <h1 class="text-5xl md:text-6xl font-bold mb-10 shimmer-text text-center">Unser Team</h1>
         
-        <p class="mb-12 text-xl text-gray-300 leading-relaxed">
+        <p class="mb-12 text-xl text-gray-300 leading-relaxed text-center">
             Lerne die kreativen Köpfe hinter OBL-X SmartSolutions kennen.
         </p>
 
@@ -40,37 +39,61 @@
         <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
             
             <!-- Karte 1 -->
-            <div class="flip-card" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-                <div class="flip-card-inner">
+            <div class="flip-card cursor-pointer" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
+                <div class="flip-card-inner rounded-xl overflow-hidden">
                     <div class="flip-card-front">
-                        <img src="https://i.postimg.cc/4y37FJkV/Awss-final2.png" alt="Person 1">
+                        <img src="https://i.postimg.cc/4y37FJkV/Awss-final2.png" alt="Person 1" class="w-full h-auto object-cover">
                     </div>
                     <div class="flip-card-back">
-                        <img src="https://i.postimg.cc/hGgG5SVv/Hintergrund.png" alt="Person 1 Info">
+                        <img src="https://i.postimg.cc/hGgG5SVv/Hintergrund.png" alt="Person 1 Info" class="w-full h-auto object-cover">
                     </div>
                 </div>
             </div>
 
             <!-- Karte 2 -->
-            <div class="flip-card" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-                <div class="flip-card-inner">
+            <div class="flip-card cursor-pointer" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
+                <div class="flip-card-inner rounded-xl overflow-hidden">
                     <div class="flip-card-front">
-                        <img src="https://i.postimg.cc/2StLgWdZ/Nur-LOGO-FG.png" alt="Person 2">
+                        <img src="https://i.postimg.cc/2StLgWdZ/Nur-LOGO-FG.png" alt="Person 2" class="w-full h-auto object-cover">
                     </div>
                     <div class="flip-card-back">
-                        <img src="https://i.postimg.cc/QCJqX4NM/rocket.png" alt="Person 2 Info">
+                        <img src="https://i.postimg.cc/QCJqX4NM/rocket.png" alt="Person 2 Info" class="w-full h-auto object-cover">
                     </div>
                 </div>
             </div>
 
             <!-- Karte 3 -->
-            <div class="flip-card" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-                <div class="flip-card-inner">
+            <div class="flip-card cursor-pointer" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
+                <div class="flip-card-inner rounded-xl overflow-hidden">
                     <div class="flip-card-front">
-                        <img src="https://i.postimg.cc/SQ5PYWRg/Team.png" alt="Person 3">
+                        <img src="https://i.postimg.cc/SQ5PYWRg/Team.png" alt="Person 3" class="w-full h-auto object-cover">
                     </div>
                     <div class="flip-card-back">
-                        <img src="https://i.postimg.cc/LX8WLDjb/Code.png" alt="Person 3 Info">
+                        <img src="https://i.postimg.cc/LX8WLDjb/Code.png" alt="Person 3 Info" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Karte 4 -->
+            <div class="flip-card cursor-pointer" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
+                <div class="flip-card-inner rounded-xl overflow-hidden">
+                    <div class="flip-card-front">
+                        <img src="https://via.placeholder.com/400x500.png?text=Person+4" alt="Person 4" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="https://via.placeholder.com/400x500.png?text=Person+4+Info" alt="Person 4 Info" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Karte 5 -->
+            <div class="flip-card cursor-pointer" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
+                <div class="flip-card-inner rounded-xl overflow-hidden">
+                    <div class="flip-card-front">
+                        <img src="https://via.placeholder.com/400x500.png?text=Person+5" alt="Person 5" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="https://via.placeholder.com/400x500.png?text=Person+5+Info" alt="Person 5 Info" class="w-full h-auto object-cover">
                     </div>
                 </div>
             </div>
@@ -96,6 +119,32 @@
         </div>
     </div>
 </footer>
+
+<!-- Flip Card CSS -->
+<style>
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    padding-top: 125%; /* 4:5 Aspect Ratio */
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.flip-card-inner.flipped {
+    transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+</style>
 
 </body>
 </html>
