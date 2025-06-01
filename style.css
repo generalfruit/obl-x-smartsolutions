@@ -979,3 +979,9 @@ a:focus, button:focus {
   z-index: 10;
 }
 /* === END FIX === */
+.slider-section {
+  padding: 0;
+  min-height: auto;
+  height: auto;
+  display: block;
+}
