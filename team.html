@@ -130,6 +130,7 @@
 .flip-card-inner {
     position: relative;
     width: 100%;
+    aspect-ratio: 4 / 5; /* → ersetzt padding-top! */
     transform-style: preserve-3d;
     transition: transform 1s;
 }
@@ -141,7 +142,7 @@
 .flip-card-front,
 .flip-card-back {
     position: absolute;
-    inset: 0;
+    inset: 0; /* top:0; left:0; right:0; bottom:0 → kurzform */
     backface-visibility: hidden;
     border-radius: 0.75rem;
     overflow: hidden;
@@ -151,7 +152,7 @@
 .flip-card-back img {
     display: block;
     width: 100%;
-    height: auto; /* <-- jetzt passt sich die Höhe dem Bild an */
+    height: 100%;
     object-fit: cover;
 }
 
@@ -175,11 +176,9 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
-    margin-bottom: 6rem; /* → größerer Abstand zum nächsten Grid */
+    margin-bottom: 4rem;
 }
 </style>
-
-
 
 
 </body>
