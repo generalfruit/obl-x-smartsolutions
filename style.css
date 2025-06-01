@@ -984,12 +984,8 @@ a:focus, button:focus {
   min-height: auto;
   height: auto;
   display: block;
-}
-.flip-card {
-  perspective: 1000px;
-  cursor: pointer;
-}
-<style>
+
+	<style>
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -1029,9 +1025,11 @@ a:focus, button:focus {
 .flip-card-front {
     z-index: 1;
 }
-</style>
 
 /* Hover: dezent heller machen */
 .flip-card:hover .flip-card-inner {
-  box-shadow: 0 0 12px rgba(160, 132, 220, 0.3);
+    box-shadow: 0 0 12px rgba(160, 132, 220, 0.3);
 }
+</style>
+
+
