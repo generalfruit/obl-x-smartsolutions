@@ -23,7 +23,7 @@
     <div class="max-w-screen-xl mx-auto px-6 py-4 flex flex-wrap justify-center gap-6 text-sm font-medium uppercase">
         <a href="index.html" class="text-white hover:text-purple-400 transition-colors">Home.</a>
         <a href="team.html" class="text-white hover:text-purple-400 transition-colors">Team.</a>
-        <!-- du kannst weitere Links ergänzen -->
+        <!-- Weitere Links möglich -->
     </div>
 </nav>
 
@@ -32,66 +32,52 @@
     <div class="max-w-4xl mx-auto px-6 text-center">
         <h1 class="text-5xl md:text-6xl font-bold mb-10 shimmer-text">Unser Team</h1>
         
-        <p class="mb-6 text-xl text-gray-300 leading-relaxed">
+        <p class="mb-12 text-xl text-gray-300 leading-relaxed">
             Lerne die kreativen Köpfe hinter OBL-X SmartSolutions kennen.
         </p>
 
-       <section class="min-h-screen flex items-center relative py-20 font-[Poppins]">
-  <div class="container mx-auto px-6">
-    <div class="max-w-5xl mx-auto">
-      <!-- Überschrift -->
-      <div class="text-center mb-12">
-        <div class="inline-block mb-3">
-          <div class="text-xs text-white tracking-widest uppercase mb-1">Team</div>
-          <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#6c4eb6] to-[#a084dc] bg-clip-text text-transparent">Meet the Team.</div>
-        </div>
-        <div class="w-20 h-1 bg-gradient-to-r from-[#cbb4f3] to-[#a084dc] mx-auto"></div>
-      </div>
+        <!-- Team-Grid -->
+        <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
+            
+            <!-- Karte 1 -->
+            <div class="flip-card" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://i.postimg.cc/4y37FJkV/Awss-final2.png" alt="Person 1">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="https://i.postimg.cc/hGgG5SVv/Hintergrund.png" alt="Person 1 Info">
+                    </div>
+                </div>
+            </div>
 
-      <!-- Team-Grid -->
-      <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 mt-10">
-        
-        <!-- Karte 1 -->
-        <div class="flip-card" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="https://i.postimg.cc/4y37FJkV/Awss-final2.png" alt="Person 1">
+            <!-- Karte 2 -->
+            <div class="flip-card" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://i.postimg.cc/2StLgWdZ/Nur-LOGO-FG.png" alt="Person 2">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="https://i.postimg.cc/QCJqX4NM/rocket.png" alt="Person 2 Info">
+                    </div>
+                </div>
             </div>
-            <div class="flip-card-back">
-              <img src="https://i.postimg.cc/hGgG5SVv/Hintergrund.png" alt="Person 1 Info">
-            </div>
-          </div>
-        </div>
 
-        <!-- Karte 2 -->
-        <div class="flip-card" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="https://i.postimg.cc/2StLgWdZ/Nur-LOGO-FG.png" alt="Person 2">
+            <!-- Karte 3 -->
+            <div class="flip-card" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://i.postimg.cc/SQ5PYWRg/Team.png" alt="Person 3">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="https://i.postimg.cc/LX8WLDjb/Code.png" alt="Person 3 Info">
+                    </div>
+                </div>
             </div>
-            <div class="flip-card-back">
-              <img src="https://i.postimg.cc/QCJqX4NM/rocket.png" alt="Person 2 Info">
-            </div>
-          </div>
-        </div>
 
-        <!-- Karte 3 -->
-        <div class="flip-card" onclick="this.querySelector('.flip-card-inner').classList.toggle('flipped')">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="https://i.postimg.cc/SQ5PYWRg/Team.png" alt="Person 3">
-            </div>
-            <div class="flip-card-back">
-              <img src="https://i.postimg.cc/LX8WLDjb/Code.png" alt="Person 3 Info">
-            </div>
-          </div>
         </div>
-
-      </div>
     </div>
-  </div>
 </section>
-
 
 <!-- Footer -->
 <footer class="bg-gray-900/80 backdrop-blur-lg border-t border-gray-800 w-full">
@@ -113,4 +99,3 @@
 
 </body>
 </html>
-
