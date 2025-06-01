@@ -840,6 +840,13 @@ a:focus, button:focus {
 .arrow:hover {
   color: #a084dc;
 }
+
+.slider-section {
+  padding: 0;
+  min-height: auto;
+  display: block;
+}
+
 /* === End Slider Styles === */
 .roadmap-section {
   position: relative;
