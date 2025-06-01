@@ -57,64 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", onScroll);
   onScroll();
 
-  // THREE.js + Rubik Cube
-  const canvas = document.getElementById('rubikCanvas');
-  const scene = new THREE.Scene();
-
-  const camera = new THREE.PerspectiveCamera(
-    75,
-    canvas.clientWidth / canvas.clientHeight,
-    0.1,
-    1000
-  );
-
-  const renderer = new THREE.WebGLRenderer({
-    canvas: canvas,
-    alpha: true,
-    antialias: true
-  });
-
-  renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-  renderer.setPixelRatio(window.devicePixelRatio);
-
-  const cubeGroup = new THREE.Group();
-  const spacing = 0.5;
-
-  for (let x = -1; x <= 1; x++) {
-    for (let y = -1; y <= 1; y++) {
-      for (let z = -1; z <= 1; z++) {
-        const geom = new THREE.BoxGeometry(0.45, 0.45, 0.45);
-        const edges = new THREE.EdgesGeometry(geom);
-        const material = new THREE.LineBasicMaterial({ color: 0xffffff });
-        const miniCube = new THREE.LineSegments(edges, material);
-        miniCube.position.set(x * spacing, y * spacing, z * spacing);
-        cubeGroup.add(miniCube);
-      }
-    }
-  }
-
-  scene.add(cubeGroup);
-
-  cubeGroup.rotation.set(Math.PI / 6, Math.PI / 3, Math.PI / 8);
-  cubeGroup.position.x = 0.5;
-  camera.position.z = 2;
-
-  function animate() {
-    requestAnimationFrame(animate);
-    cubeGroup.rotation.x += 0.01;
-    cubeGroup.rotation.y += 0.01;
-    renderer.render(scene, camera);
-  }
-  animate();
-
-  window.addEventListener('resize', () => {
-    const width = canvas.clientWidth;
-    const height = canvas.clientHeight;
-    renderer.setSize(width, height);
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-  });
-
+  
   // Slider
   const slides = document.querySelectorAll('.slide');
   const nextBtn = document.querySelector('.arrow.right');
