@@ -127,13 +127,14 @@
 .flip-card {
     perspective: 1000px;
     cursor: pointer;
+    position: relative;
 }
 
 .flip-card-inner {
-    position: relative;
     width: 100%;
     transform-style: preserve-3d;
     transition: transform 1s;
+    height: fit-content;
 }
 
 .flip-card-inner.flipped {
@@ -143,7 +144,10 @@
 .flip-card-front,
 .flip-card-back {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     backface-visibility: hidden;
     border-radius: 0.75rem;
     overflow: hidden;
@@ -153,8 +157,8 @@
 .flip-card-back img {
     display: block;
     width: 100%;
-    height: auto; /* Damit Bildhöhe nicht erzwungen wird */
-    object-fit: contain; /* Optional: du kannst auch "cover" verwenden */
+    height: auto;
+    object-fit: contain;
 }
 
 .flip-card-back {
@@ -162,25 +166,8 @@
     z-index: 2;
 }
 
-.flip-card-front {
-    z-index: 1;
-}
+.flip-card-f
 
-/* Hover-Effekt */
-.flip-card:hover .flip-card-inner {
-    box-shadow: 0 0 12px rgba(160, 132, 220, 0.3);
-}
-
-/* === Grid-Anpassung === */
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    row-gap: 5rem; /* Mehr Abstand zwischen Reihen */
-    column-gap: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-}
-</style>
 
 </body>
 </html>
