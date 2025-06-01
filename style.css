@@ -996,7 +996,7 @@ a:focus, button:focus {
 .flip-card-inner {
     position: relative;
     width: 100%;
-    padding-top: 125%; /* 4:5 Ratio */
+    aspect-ratio: 4 / 5; /* → ersetzt padding-top! */
     transform-style: preserve-3d;
     transition: transform 1s;
 }
@@ -1008,11 +1008,10 @@ a:focus, button:focus {
 .flip-card-front,
 .flip-card-back {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0; /* top:0; left:0; right:0; bottom:0 → kurzform */
     backface-visibility: hidden;
+    border-radius: 0.75rem;
+    overflow: hidden;
 }
 
 .flip-card-front img,
@@ -1021,7 +1020,6 @@ a:focus, button:focus {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 0.75rem; /* entspricht rounded-xl */
 }
 
 .flip-card-back {
@@ -1039,14 +1037,12 @@ a:focus, button:focus {
 }
 
 /* === Grid-Anpassung === */
-
-/* Abstand zwischen den Karten */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem; /* Hier Abstand zwischen den Karten */
+    gap: 2rem;
     margin-top: 2rem;
-    margin-bottom: 4rem; /* Genug Abstand nach unten */
+    margin-bottom: 4rem;
 }
 
 
